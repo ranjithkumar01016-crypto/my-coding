@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Grand Heaven - Registration</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, hsla(256, 86%, 30%, 0.87) 0%, #113532 50%, #210333 100%);
+      color: #e0e0ff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .floating {
+      position: absolute;
+      border-radius: 50%; 
+      pointer-events: none;
+      animation: float 25s infinite ;
+    }
+
+    .floating:nth-child(1) { width: 180px; height: 180px; top: 10%; left: 15%; animation-delay: 0s; }
+    .floating:nth-child(2) { width: 120px; height: 120px; top: 60%; left: 75%; animation-delay: 5s; }
+    .floating:nth-child(3) { width: 220px; height: 220px; top: 40%; right: 10%; animation-delay: 12s; }
+
+    @keyframes float {
+      0%, 100% { transform: translate(0, 0) rotate(0deg); }
+      25% { transform: translate(60px, -40px) rotate(10deg); }
+      50% { transform: translate(-30px, 70px) rotate(-15deg); }
+      75% { transform: translate(40px, -60px) rotate(5deg); }
+    }
+
+    .register-container {
+      position: relative;
+      width: 450px;
+      padding: 50px 40px;
+      background: rgba(20, 20, 45, 0.65);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 24px;
+      box-shadow: 0 25px 80px rgba(0,0,0,0.6);
+      z-index: 10;
+    }
+
+    .logo-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .logo-title h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      font-weight: 700;
+      background: linear-gradient(90deg, #c3a1ff, #e0d0ff, #a78bff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .logo-title p {
+      color: #a0a0cc;
+      font-size: 0.95rem;
+      margin-top: 6px;
+    }
+
+    .form-group {
+      margin-bottom: 22px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      color: #c0c0ff;
+      font-size: 0.92rem;
+      font-weight: 500;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 14px 18px;
+      background: rgba(40, 40, 70, 0.5);
+      border: 1px solid rgba(160,140,255,0.18);
+      border-radius: 12px;
+      color: white;
+      font-size: 1rem;
+      transition: all 0.25s ease;
+    }
+
+    .form-group input:focus {
+      outline: none;
+      border-color: #b090ff;
+      box-shadow: 0 0 0 3px rgba(176, 144, 255, 0.18);
+      background: rgba(50, 50, 85, 0.6);
+    }
+
+    .btn-register {
+      width: 100%;
+      padding: 16px;
+      background: linear-gradient(90deg, #7b5eff, #b090ff);
+      color: white;
+      border: none;
+      border-radius: 12px;
+      font-size: 1.05rem;
+      font-weight: 500;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+
+    .btn-register:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 35px rgba(123, 94, 255, 0.5);
+      background: linear-gradient(90deg, #8b6eff, #c0a0ff);
+    }
+
+    .footer-text {
+      text-align: center;
+      margin-top: 25px;
+      font-size: 0.9rem;
+      color: #9090bb;
+    }
+
+    a {
+      color: #c0a0ff;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    a:hover {
+      color: #d0b8ff;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="floating"></div>
+  <div class="floating"></div>
+  <div class="floating"></div>
+
+  <div class="register-container">
+
+    <div class="logo-title">
+      <h1>Create an Google ACCOUNT </h1>
+    </div>
+
+    <form>
+      <div class="form-group">
+        <label>Full Name</label>
+        <input type="text" placeholder="John Doe" required>
+      </div>
+
+      <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" placeholder="name@gmail.com" required>
+      </div>
+
+      <div class="form-group">
+        <label>Username</label>
+        <input type="text" placeholder="your_username" required>
+      </div>
+
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" placeholder="••••••••" required>
+      </div>
+
+      <div class="form-group">
+        <label>Confirm Password</label>
+        <input type="password" placeholder="••••••••" required>
+      </div>
+
+      <button type="submit" class="btn-register">Create Account</button>
+
+      <div class="footer-text">
+        Already have an account? <a href="#">Login</a>
+      </div>
+    </form>
+
+  </div>
+
+</body>
+</html>
